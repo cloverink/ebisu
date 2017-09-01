@@ -1,0 +1,62 @@
+.mobile {
+
+
+  .recipes-desc .relate-list-container .relate-list > a:last-child {
+    display: none;
+  }
+
+  .recipes-desc .relate-list-container .relate-list > a,
+  .recipes-list > a {
+    width: ~'calc(((100% / 2) - 40px) + (40px/2))';
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    .avt {height: 150px; }
+    &:nth-child(3n+3) {margin-right: 40px;}
+    &:nth-child(even) {margin-right: 0;}
+  }
+
+  .recipes-desc article .entry-content { 
+    .alignright {width: 100%;clear: both;margin-bottom: 1vw;}
+  }
+
+  .recipes-desc article .entry-content div.col-2 .list {
+    font-size: 12px;
+  }
+
+
+  .my_account .woocommerce-MyAccount-content {
+    .bill-address {width: 100%;margin-right: 20px;padding: 10px 10px 0px;clear: both;margin-bottom: 10px;}
+
+    .my-order {padding: 10px 10px;width: 100%;
+      table thead th {padding: 10px;}
+      table td {line-height: 12px;font-size: 12px;}
+    }
+    
+  }
+
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+  .ebisu .about-us .about-us-desc > div {clear: both;width: 100%;padding-bottom: 0;}
+
+  .ebisu .about-us .about-us-slider {margin-bottom: 0;}
+
+  .ebisu .about-us .bottom-banner h3 {font-size: 15px;}
+
+  .ebisu .about-us .bottom-banner a {top: ~'calc(50% + 10px)';}
+
+  .ebisu .my_account #customer_login form.register .submit-row .css-fbl.js-fbl {float: left;margin-bottom: 10px;width: 100%;}
+
+  .ebisu .my_account #customer_login form.register .submit-row .or {display: none;}
+
+  .ebisu .my_account #customer_login form.register .submit-row input[type=submit] {width: 100%;}
+
+}

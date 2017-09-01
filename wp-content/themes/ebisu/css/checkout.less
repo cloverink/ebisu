@@ -1,0 +1,155 @@
+.ebisu .checkout {
+  
+  .top-banner {
+    max-height: 300px;
+    min-height: 150px;
+    background: center center no-repeat;
+    background-size: cover;
+    height: 18vw;
+    position: relative;
+
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 30px;
+      top: ~'calc(50% - 15px)';
+      position: relative;
+    }
+  } /*  top-banner */
+
+
+  h1.entry-title {
+    display: none;
+  }
+
+  h2 {
+    color: @color-fb;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #C2185B;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .entry-content {
+    margin-top: 40px;
+  }
+
+  .woocommerce-thankyou-order-received {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: @color-green;
+  }
+
+  .woocommerce-thankyou-order-details.order_details {
+    > li {
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: @color-button;
+      background: transparent;
+
+      > strong {
+        color: #444;
+        font-style: 20px;
+        font-family: roboto;
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .order_details {
+
+    border: solid 1px @color-border-bw;
+
+    th {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .product-name {
+      > a {
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: @color-button;
+      }
+
+      .variation {
+        font-size: 13px;
+        .variation-pa_pack-size {
+          font-weight: 600;
+          letter-spacing: 1px;
+          p { 
+            font-weight: 500; 
+            font-size: 12px;
+            letter-spacing: normal;
+          }
+        }
+      }
+    } /* product-name */
+
+    .woocommerce-Price-amount.amount {
+      font-size: 20px;
+      color: @color-green;
+    }
+
+    small {
+      font-size: 11px;
+      font-weight: 600;
+      color: @color-fb;
+
+    }
+
+  }
+
+  .order_details:before, .order_details:after {
+    display: none;
+  }
+
+  ul.bacs_details {
+    margin: 0 0 !important;
+
+    .account_number {
+      font-size: 14px;
+      strong {
+        display: inline;
+        margin-left: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #2E7D32;
+      }
+    }
+  }
+
+  .customer_details {
+    th {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    td {
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+  }
+
+
+  address {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+}

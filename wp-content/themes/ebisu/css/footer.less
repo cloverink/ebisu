@@ -1,0 +1,133 @@
+@footer-company-profile-icon : "@{img-path}/footer/company-profile-icon.png";
+@footer-so-fb     : "@{img-path}/footer/so-fb.png";
+@footer-so-ig     : "@{img-path}/footer/so-ig.png";
+@footer-so-tw     : "@{img-path}/footer/so-tw.png";
+@footer-payment   : "@{img-path}/footer/payments.png";
+
+footer.site-footer {
+
+  padding-bottom: 0px;
+
+  .footer-widgets {
+    border: none;
+  }
+
+  h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .footer-company-profile {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 25px;
+
+    > li {
+      position: relative;
+      margin-bottom: 5px;
+
+      &:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    .company-addr {
+      &:before {
+        background: url(@footer-company-profile-icon) no-repeat;
+        background-position: 2px 1px;
+      }
+    }
+
+    .company-phone {
+      &:before {
+        background: url(@footer-company-profile-icon) no-repeat;
+        background-position: 2px -27px;
+      }
+    }
+
+    .company-mobile {
+      &:before {
+        background: url(@footer-company-profile-icon) no-repeat;
+        background-position: 2px -61px;
+      }
+    }
+    
+    .company-email {
+      &:before {
+        background: url(@footer-company-profile-icon) no-repeat;
+        background-position: 2px -92px;
+      }
+    }
+
+    .company-line {
+      &:before {
+        background: url(@footer-company-profile-icon) no-repeat;
+        background-position: 2px -122px;
+      }
+    }
+
+  } /*  .footer-company-profile */
+
+  .footer-service {
+    margin: 0 0;
+
+    > li {
+      width: 50%;
+      float: left;
+
+      > a {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 25px;
+        float: left;
+        width: 100%;
+        transition: color .3s ease;
+
+        &:hover {
+          color: @color-link-hover;
+        }
+      }
+    }
+  } /* footer-service */
+
+
+  .footer-so {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 5px;
+
+    > a {
+      float: left;
+      width: 26px;
+      height: 26px;
+
+      &.fb {background: url(@footer-so-fb) center center no-repeat;}
+      &.ig {background: url(@footer-so-ig) center center no-repeat;}
+      &.tw {background: url(@footer-so-tw) center center no-repeat;}
+      + a {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .payments-available {
+    width: 230px;
+    height: 25px;
+    margin-top: 15px;
+    background: url(@footer-payment) no-repeat left center;
+  }
+
+  .footer-copyright {
+    width: 100%;
+    background: #FFF;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+}

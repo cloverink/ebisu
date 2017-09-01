@@ -1,0 +1,626 @@
+.ebisu .my_account {
+  
+  .top-banner {
+    max-height: 300px;
+    min-height: 150px;
+    background: center center no-repeat;
+    background-size: cover;
+    height: 18vw;
+    position: relative;
+
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 30px;
+      top: ~'calc(50% - 15px)';
+      position: relative;
+    }
+
+
+  } /* top-banner */
+
+
+  .entry-header { .hide; }
+
+  #customer_login {
+    margin-top: 80px;
+    position: relative;
+
+    h3 { 
+      text-align: center; 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        left: ~'calc(50% - 25px)';
+        bottom: 0;
+        height: 2px;
+        background: @color-border-bw;
+      }
+    }
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: ~'calc(44% - 1px)';
+      width: 2px;
+      height: 90%;
+      background: @color-border-bw; 
+      @media (max-width: 768px) {
+        .hide;
+      }
+    }
+
+    form {
+      padding: 0 4vw;
+      margin-bottom: 50px;
+
+      &.login {
+
+        .lnkForgotMyPass { 
+          .pull-right; 
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          padding-top: 5px;
+          font-weight: 500;
+          color: @color-button;
+          &:hover {
+            text-decoration: underline;
+          }
+        } /* inkForgot pass */
+
+        .submit-row {
+          float: left;
+          clear: both;
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 0;
+
+          span.or {
+            width: 100%;
+            display: inline-block;
+            font-weight: 600;
+            margin: 5px 0;
+          }
+        } /* submit-row */
+
+
+      } /* .login */
+
+      &.register {
+        background: #FFF;
+        padding: 30px 50px 10px;
+        border: solid 1px @color-border-bw;
+        border-top: none;
+        float: left;
+        clear: both;
+        width: 100%;
+        text-align: center;
+
+        .submit-row {
+          
+          max-width: 500px;
+          margin: 0 auto; 
+
+          .css-fbl.js-fbl {
+            float: right;
+          }
+
+          .or {
+            font-size: 15px;
+            margin: 0 10px;
+            font-weight: 600;
+            line-height: 39px;  
+          }
+
+          input[type=submit] {
+            float: left;
+          }
+
+
+        }
+
+      } /* register */
+    }
+
+    .tab-register-type {
+      float: left;
+      clear: both;
+      width: 100%;
+      display: table;
+
+      > div {
+        display: table-cell;
+        text-align: center;
+        line-height: 50px;
+        background: transparent;
+        border: none;
+        border-bottom: solid 1px @color-border-bw;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        cursor: pointer;
+        &.dummy {
+          cursor: default;
+        }
+
+        &.actived {
+          border: solid 1px @color-border-bw;
+          border-bottom: 0;
+          background: #FFF;
+        }
+
+        &#tab-Customer {
+          width: 150px;
+        }
+        &#tab-Wholesale {
+          width: 200px;
+        }
+      }
+    }
+
+  } /* end customer_login */
+
+
+  .woocommerce-MyAccount-content {
+    width: 100%;
+    float: left;
+    clear: both;
+
+    h4 {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      padding: 0 50px;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 1px;
+      > a {
+        color: @color-button;
+      }
+    } /* h4 */
+
+
+    @bg-shadow-curv-top    : "@{img-path}/bg/bg-shadow-curv-top.png";
+    @bg-shadow-curv-bottom : "@{img-path}/bg/bg-shadow-curv-bottom.png";
+
+    .simple-profile {
+      float: left;
+      clear: both;
+      width: 100%;
+      color: @color-button;
+      padding: 20px 0;
+      position: relative;
+      margin-bottom: 50px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background: url(@bg-shadow-curv-top) no-repeat top center;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: url(@bg-shadow-curv-bottom) no-repeat top center;
+      }
+
+      > div {
+        float: left;
+        clear: both;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+
+        &:first-child {
+          text-transform: uppercase;
+          font-size: 18px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        &:last-child {
+          font-size: 15px;
+          letter-spacing: 1px;
+
+          span + span:before {
+            content: '|';
+            margin: 0 5px;
+          }
+        }
+
+      }
+
+      #edit-simple-profile {
+        position: absolute;
+        left: ~'calc(50% + 250px)';
+        top: 5px;
+        color: @color-button;
+      }
+
+    } /* simple-profile */
+
+    .bill-address {
+      float: left;
+      width: ~'calc(45% - 50px)';
+      margin-right: 50px;
+      border: solid 1px @color-button;
+      padding: 25px 30px 0px;
+      text-align: center;
+      position: relative;
+
+      h5 {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      #edit-address {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        color: @color-button;
+      }
+
+    } /* bill-address */
+
+    .my-order {
+      float: left;
+      width: 55%;
+      border: solid 1px @color-button;
+      padding: 25px 30px;
+
+      h5 {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      table {
+        th {
+          background: transparent;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: @color-button;
+          text-align: center;
+        }
+
+        td {
+          text-align: center;
+          letter-spacing: 1px;
+          line-height: 15px;
+          font-size: 15px;
+
+          a {
+            color: @color-button;
+            text-decoration: none;
+          }
+
+          &:last-child {
+            a {
+              color: @color-font-dark;
+              &:first-child {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      
+    } /* my-order */
+  } /* .woocommerce-MyAccount-content  */
+
+  .edit-account {
+    max-width: 600px;
+    margin: 50px auto 0;
+
+    label {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    fieldset {
+      margin-top: 70px;
+      legend {
+        font-size: 17px;
+        font-weight: 700px;
+        text-transform: uppercase;
+      }
+    }
+
+    .input-text { letter-spacing: 1px;}
+
+  } /* edit-account */
+
+
+  .my-address-header {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  .woocommerce-Address {
+    position: relative;
+
+    h3 { 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    address {
+      font-style: normal;
+      letter-spacing: 1px;
+    }
+  } /* woocommerce-Address */
+
+  .addresses header.title a:before {
+    font-size: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: @color-font-dark;
+  }
+
+  .edit-billing-address {
+    margin: 50px auto 0;
+    max-width: 800px;
+    h3 { 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    label {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .input-text { letter-spacing: 1px;}
+    .select2-choice {
+      padding: 10px;
+    }
+  }
+
+}
+
+
+
+
+.ebisu .my_account .view-order {
+
+ 
+
+ mark {
+  font-weight: 600;
+ }
+
+ .view-order-header {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #388e3c;
+    margin: 10px 0;
+ }
+
+ h2 {
+  margin-top: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+ }
+
+
+  .order_details {
+
+    border: solid 1px @color-border-bw;
+
+    th {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .product-name {
+      > a {
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: @color-button;
+      }
+
+      .variation {
+        font-size: 13px;
+        .variation-pa_pack-size {
+          font-weight: 600;
+          letter-spacing: 1px;
+          p { 
+            font-weight: 500; 
+            font-size: 12px;
+            letter-spacing: normal;
+          }
+        }
+      }
+    } /* product-name */
+
+    .woocommerce-Price-amount.amount {
+      font-size: 20px;
+      color: @color-green;
+    }
+
+    small {
+      font-size: 11px;
+      font-weight: 600;
+      color: @color-fb;
+
+    }
+
+  }
+
+  .order_details:before, .order_details:after {
+    display: none;
+  }
+
+  ul.bacs_details {
+    margin: 0 0 !important;
+
+    .account_number {
+      font-size: 14px;
+      strong {
+        display: inline;
+        margin-left: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #2E7D32;
+      }
+    }
+  }
+
+  .customer_details {
+    th {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    td {
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+  }
+
+
+  address {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+
+  .track-container {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px;
+    border: solid 1px @color-button;
+    float: left;
+    clear: both;
+    width: 100%;
+
+    b {
+      color: @color-button;
+    }
+
+    .track-provider {}
+    .track-number {}
+
+    a {
+      color: #FFF;
+      float: left;
+      margin-top: 20px;
+      text-align: center;
+      &:hover {
+        color: @color-button;
+      }
+    }
+  }
+
+} /* .ebisu .my_account .view-order */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fb button */
+.ebisu .my_account { 
+
+  .css-fbl.js-fbl {
+    clear: both;
+    width: 225px;
+    font-size: 12px;
+    line-height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0;
+    min-width: 220px;
+    box-shadow: none;
+    border: solid 2px #a8a882;
+    transition: all .2s ease;
+    border-color: #3b5998;
+    background: #3b5998;
+    text-indent: 30px;
+    margin: 0 auto;
+    opacity: 1;
+    overflow: hidden;
+
+    img {
+      left: 6px;
+      top: 15%;
+    }
+
+    > div {
+      display: inline;
+      text-shadow: none;
+    }
+
+    &:before {
+      content: "\f09a";
+      font-family: 'FontAwesome';
+      position: absolute;
+      left: -17px;
+      top: -1px;
+      font-size: 16px;
+      text-shadow: none;
+      font-weight: 400;
+    }
+
+
+    &:hover {
+      background: #FFF;
+      &:before,
+      > div {
+        color: @color-fb;  
+      }      
+    }
+  }
+
+}

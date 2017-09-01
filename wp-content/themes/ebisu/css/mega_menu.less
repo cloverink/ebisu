@@ -1,0 +1,188 @@
+@cat-meal         : "@{img-path}/cat-icon/cat-01-meat.png";
+@cat-seafood      : "@{img-path}/cat-icon/cat-02-seafood.png";
+@cat-processed    : "@{img-path}/cat-icon/cat-03-processed.png";
+@cat-ingredients  : "@{img-path}/cat-icon/cat-04-ingredients.png";
+@cat-seasoning    : "@{img-path}/cat-icon/cat-05-seasoning.png";
+@cat-dessert      : "@{img-path}/cat-icon/cat-06-dessert.png";
+
+@cat-meal-bg      : "@{img-path}/cat-icon/topcat-bg-meat.png";
+
+.menu-mega_menu-container {
+  .pull-left;
+  width: 100%;
+  line-height: @tophead-height-bottom;
+
+  > ul {
+    width: 100%;
+    display: table;
+    position: relative;
+
+    @media (max-width: 767px) {
+      table-layout: fixed;
+    }
+
+    > li {
+      display: table-cell;
+      float: none !important;
+      transition: all .2s ease;
+      border-right: solid 1px @color-border;
+      &:first-child {
+        border-left: solid 1px @color-border;
+      }
+
+      &:hover {
+        background: @color-dark;  
+      }
+
+      > a {
+        .pull-left;
+        color: @color-font-lite;
+        text-transform: uppercase;
+        line-height: @tophead-height-bottom;
+        height: @tophead-height-bottom;
+        padding: 5px 30px 0;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        transition: all .3s ease;
+        white-space: nowrap;
+        letter-spacing: 1px;
+
+        &:before {
+          content: '';
+          background: no-repeat center center;
+          width: 40px;
+          height: 30px;
+          float: left;
+          margin-top: 20px;
+          margin-left: 0px;
+          transition: all .3s ease;
+
+          @media (max-width: 1280px) {
+            margin-left: -20px;
+          }
+          @media (max-width: 1024px) {
+            margin-top: 10px;
+          }
+          @media (max-width: 900px) {
+            margin-left: 30%;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          font-size: 13px;
+        }
+        @media (max-width: 1024px) {
+          line-height: @tophead-height-bottom-min;
+          height: @tophead-height-bottom-min;
+          padding: 0 20px;
+        }
+        @media (max-width: 900px) {
+          font-size: 0;
+        }
+
+        + ul.sub-menu {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          top: @tophead-height-bottom + 1px;
+          z-index: 2;
+          width: 100%;
+          list-style: none;
+          margin: 0 0;
+          padding: 40px;
+          transition: all .2s ease;
+          height: 340px;
+          background-color: rgba(248,247,246,0.95);
+          box-shadow: 0 0 10px -2px @color-darkest;
+          display: table;
+          table-layout: fixed;
+
+          @media (max-width: 1024px) { 
+            top: @tophead-height-bottom-min+1;
+          }
+
+          &:hover {
+            visibility: visible;
+            opacity: 1;
+            top: 70px;
+            @media (max-width: 1024px) { 
+              top: @tophead-height-bottom-min;
+            }
+          }
+
+          > li {
+            display: table-cell;
+            line-height: 30px;
+            vertical-align: top;
+
+            > a {
+              color: @color-font-darkb;
+              font-size: 15px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+
+            ul.sub-menu {
+              list-style: none;
+              margin: 0 0;
+              margin-top: 10px;
+              > li {
+
+                line-height: 35px;
+                height: 35px;
+
+                > a {
+                  font-size: 14px;
+                  color: @color-button;
+                  text-transform: capitalize;
+                  transition: color .2s ease;
+                  float: left;
+                  line-height: 35px;
+                  width: 90%;
+
+                  &:hover {
+                    color: @color-font-lite;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+        &:hover {
+          + ul.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            top: 70px;
+            @media (max-width: 1024px) { 
+              top: @tophead-height-bottom-min;
+            }
+          }              
+        }
+      } /* end of link cat */
+
+      &.menu-cat-meat {
+        > a:before {background-image: url(@cat-meal)}
+        > ul {
+          background: url(@cat-meal-bg) no-repeat right bottom;
+          background-color: transparent !important;
+          background-size: cover;
+        }
+      }
+      &.menu-cat-seafood > a:before {background-image: url(@cat-seafood)}
+      &.menu-cat-processed-food > a:before {background-image: url(@cat-processed)}
+      &.menu-cat-ingredients > a:before {background-image: url(@cat-ingredients)}
+      &.menu-cat-seasoning > a:before {background-image: url(@cat-seasoning)}
+      &.menu-cat-dessert > a:before {background-image: url(@cat-dessert)}
+      
+
+    } /* end of li link cat */
+
+  } /* end of ul link cat */
+} /* menu-mega_menu-container */
+

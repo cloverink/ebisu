@@ -1,0 +1,417 @@
+.ebisu .recipes {
+  
+  .top-banner {
+    max-height: 300px;
+    min-height: 150px;
+    background: center center no-repeat;
+    background-size: cover;
+    height: 18vw;
+    position: relative;
+
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 30px;
+      top: ~'calc(50% - 15px)';
+      position: relative;
+    }
+  } /* top-banner */
+
+  .recipes-list;  
+
+} /* recipes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ebisu .recipes-desc {
+
+
+  .top-banner {
+    max-height: 300px;
+    min-height: 150px;
+    background: center center no-repeat;
+    background-size: cover;
+    height: 18vw;
+    position: relative;
+    margin-bottom: 50px;
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 30px;
+      top: ~'calc(50% - 15px)';
+      position: relative;
+    }
+  } /* top-banner */
+
+
+  article {
+    margin: 0 auto;
+
+    .releate-item {
+      max-width: 350px;
+      width: 100%;
+      padding-right: 50px;
+
+      h5 {
+        line-height: 40px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 30px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 10%;
+          left: 0;
+          bottom: 0;
+          background: @color-link-hover;
+        }
+
+      } /* h5 */
+
+      .product-box  {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 50px;
+        float: left;
+        clear: both;
+        
+        h3 {
+          font-size: 15px;
+          margin-top: 20px;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+
+        .product-price {
+          float: left;
+          clear: both;
+          font-size: 16px;
+          line-height: 16px;
+          height: 16px;
+          font-weight: 600;
+          margin-bottom: 25px;
+          color: @color-link-hover;
+
+          &:before {
+            content: '฿';
+            font-weight: 200;
+            padding-right: 5px;
+          }
+        } /* product-price */
+
+
+        button {
+          float: left; 
+          clear: both;
+          text-transform: uppercase;
+          line-height: 30px;
+          padding: 0 10px;
+          width: 150px;
+          letter-spacing: 1px;
+
+          background-color: #FFF;
+          border: solid 1px @color-link-hover;
+          color: @color-link-hover;
+          box-shadow: none;
+          &:hover {
+            background-color: @color-link-hover;
+            color: #FFF;
+          }
+        }
+
+      } /* product-box */
+    } /* relate item */
+
+    .entry-content {
+      max-width: 850px;
+
+      p {
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      div.col-2 {
+
+        width: 100%; clear: both; float: left;
+        margin-bottom: 30px;
+
+        .list {
+          color: @color-button;
+          font-size: 14px;
+          letter-spacing: 1px;
+          margin-bottom: 30px;
+          line-height: 25px;
+        }
+      } /* col-2 */
+
+      .recipes-so {
+        width: 100%;
+        height: 100px;
+        clear: both;
+        float: right;
+        border-top: solid 2px @color-darkest;
+        border-bottom: solid 2px @color-darkest;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+
+        h6 {
+          width: 100%;
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          margin: 20px 0 10px;
+        }
+
+        > div {
+          position: absolute;
+        }
+
+        .fb {
+          background: url("/wp-content/themes/ebisu/img/footer/so-fb.png") center center no-repeat;
+          display: inline-block;
+          width: 26px;
+          height: 26px;
+        }
+        .tw {
+          background: url("/wp-content/themes/ebisu/img/footer/so-tw.png") center center no-repeat;
+          display: inline-block;
+          width: 26px;
+          height: 26px;
+          margin-left: 10px;
+        }
+
+      } /* recipes-so */
+
+    } /* .entry-content */
+  } /* article */
+
+  .relate-list-container {
+    h4 {
+      line-height: 40px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 10%;
+        left: 0;
+        bottom: 0;
+        background: @color-link-hover;
+      }
+    } /* h4 */
+
+    .relate-list {
+      .recipes-list;
+      margin-top: 30px;
+    }
+  }
+
+
+
+} /* recipes-desc */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.recipes-list {
+    margin-top: 50px;
+    width: 100%;
+    float: left;
+    clear: both;
+
+
+    > a {
+      float: left;
+      width: ~'calc(((100% / 3) - 80px) + (80px/3))';
+      margin-right: 80px;
+      margin-bottom: 50px;
+      box-shadow: 0 0 10px -5px #000;
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+
+      .avt {
+        height: 240px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .btn {
+          border: solid 2px @color-button;
+          background: transparent;
+          color: #FFF;
+          text-transform: uppercase;
+          text-align: center;
+          position: absolute;
+          z-index: 3;
+          padding: 5px;
+          min-width: 50%;
+          font-weight: 500;
+          letter-spacing: 1px;
+          font-size: 13px;
+          line-height: 20px;
+          left: 25%;
+          top: 30%;
+          opacity: 0;
+          transition: all .2s ease;
+        }
+
+        .dt {
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          font-style: italic;
+          color: #FFF;
+          font-weight: 300;
+          text-align: center;
+          font-size: 13px;
+          letter-spacing: 1px;
+          top: ~'calc(35% + 40px)';
+          opacity: 0;
+          transition: all .3s ease;
+        }
+
+        &:after {
+          content: '';
+          background: #000;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          z-index: 2;
+          transition: opacity .3s ease;
+        }
+
+      
+      } /* avt */
+
+      .desc {
+        background: #e9e9d9;
+        text-align: center;
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 15px;
+          line-height: 30px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          width: 100%;
+          position: relative;
+          padding: 30px 0 20px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+          &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            background: #444;
+            width: 20%;
+            bottom: 15px;
+            left: 40%;
+          }
+        } /* h3 */
+
+        p {
+          font-size: 11px;
+          margin: 0 0 0 10px;
+          width: ~'calc(100% - 20px)';
+          letter-spacing: 1px;
+          color: @color-font-lite;
+          font-weight: 500;
+          overflow: hidden;
+          height: 75px;
+          line-height: 15px;
+        } /* p */
+      }
+
+      &:hover {
+        .avt {
+          .btn {
+            top: 35%;
+            opacity: 1;
+          }
+
+          .dt {
+            opacity: 1;
+          }
+
+          &:after {
+            opacity: 0.5;
+          }
+        }
+      } /* a:hover */
+    } /* a */
+
+  } /* .recipes-list  */

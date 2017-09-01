@@ -1,0 +1,203 @@
+.ebisu .order-tracking {
+  
+  .top-banner {
+    max-height: 300px;
+    min-height: 150px;
+    background: center center no-repeat;
+    background-size: cover;
+    height: 18vw;
+    position: relative;
+
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 30px;
+      top: ~'calc(50% - 15px)';
+      position: relative;
+    }
+  } /* top-banner */
+
+  .page-desc {
+    h3 {
+      width: 100%;
+      font-size: 17px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      color: @color-font-dark;
+      
+      margin: 50px auto 20px;
+    }
+
+    p {
+      text-align: center;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    margin-bottom: 50px;
+  } /* .page-desc */
+
+
+  .order-form {
+    margin-bottom: 50px;
+    padding: 0;
+    
+    .avt {
+      width: 35%;
+      padding:  0px;
+      background-repeat: no-repeat;
+      background-position: center 30px;
+      text-align: center;
+      box-shadow: 0 0 5px -2px #000;
+      margin-bottom: 40px;
+      background-color: #FFF;
+      height: 375px;
+
+      h4 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+      }
+
+      h5 {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+      }
+
+      .delivery_day {
+        font-size: 17px;
+        font-weight: 700;
+        color: @color-button;
+        letter-spacing: 1px;
+      }
+
+      .delivery_time {
+        font-size: 15px;
+        color: @color-button;
+        letter-spacing: 1px; 
+        margin-bottom: 10px;
+      }
+
+      .delivery_note {
+        font-size: 11px;
+        color: @color-button;
+        letter-spacing: 1px; 
+      }
+
+    }
+
+    .desc {
+      width: 65%;
+      border: solid 1px @color-dark;
+      text-align: center;
+      padding-top: 50px;
+
+      h4 {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 17px;
+      }
+
+      form {
+        clear: both;
+        width: 50%;
+        margin: 50px auto 0;
+        text-align: center;
+      }
+
+      input {
+        clear: both;
+        display: block;
+        margin: 0 auto 20px;
+
+        &[type=text] {
+          width: 100%;
+          border: solid 1px @color-button;
+          background: #FFF;
+          border-radius: 0;
+        }
+      }
+
+    }
+  } /* order-desc */
+
+
+  .order-tracking-result {
+    margin-bottom: 50px;
+    border: solid 1px @color-dark;
+    padding: 40px 50px;
+    max-width: 1100px;
+
+    h4 {
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      span {
+        font-weight: 400;
+        text-transform: lowercase;
+        margin-left: 10px;
+        color: @color-fb;
+      }
+    }
+
+
+    .result {
+      margin-top: 30px;
+
+      > div {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-indent: 20px;
+        margin-bottom: 10px;
+
+        span {
+          color: @color-green;
+          margin-left: 10px;
+        }
+
+        .btn-tracking {
+          margin-left: 20px;
+          color: #FFF;
+          float: left;
+          margin-top: 20px;
+          
+          &:hover {
+            color: @color-button;
+          }
+        }
+      }
+
+    }
+
+    .error {
+      margin-top: 30px;
+      letter-spacing: 1px;
+      color: @color-red;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+

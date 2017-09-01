@@ -1,0 +1,79 @@
+.tablet .home-section.newsletter > form input[type=email] {
+  width: 30%;
+}
+.tablet .recipes-desc .relate-list-container .relate-list > a,
+.tablet .recipes-list > a {
+  width: calc(((100% / 3) - 40px) + (40px/3));
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+.tablet .recipes-desc .relate-list-container .relate-list > a:nth-child(3n+3),
+.tablet .recipes-list > a:nth-child(3n+3) {
+  margin-right: 0;
+}
+.tablet .recipes-desc article .entry-content {
+  width: calc(100% - 20px);
+  max-width: 100%;
+  margin-left: 10px;
+  float: left;
+}
+.tablet .recipes-desc article .entry-content .alignright {
+  width: 30%;
+}
+.tablet .my_account .woocommerce-MyAccount-content .bill-address {
+  width: calc(40% - 20px);
+  margin-right: 20px;
+  padding: 10px 10px 0px;
+}
+.tablet .my_account .woocommerce-MyAccount-content .my-order {
+  padding: 10px 10px;
+  width: 60%;
+}
+.tablet .my_account .woocommerce-MyAccount-content .my-order table thead th {
+  padding: 10px;
+}
+.tablet .my_account .woocommerce-MyAccount-content .my-order table td {
+  line-height: 12px;
+  font-size: 12px;
+}
+@media (max-width: 1024px) {
+  div.topnav .col-full .dd label:after {
+    display: none;
+  }
+  .menu-mega_menu-container > ul > li > a + ul.sub-menu {
+    display: none;
+  }
+  #lnkRegister {
+    display: none;
+  }
+  #primary.recipes {
+    margin-top: 0;
+  }
+  .recipes-desc article .releate-item {
+    display: none;
+  }
+  .about-us .about-us-desc {
+    margin: 0 0;
+  }
+  .ebisu .btn-ebisu,
+  .ebisu input[type="submit"],
+  .ebisu button[type="submit"] {
+    width: 150px;
+    min-width: 150px;
+  }
+  .ebisu .my_account .css-fbl.js-fbl {
+    width: 190px;
+    font-size: 10px;
+    min-width: 190px;
+  }
+  .ebisu .my_account .css-fbl.js-fbl:before {
+    left: -20px;
+    top: 0px;
+    font-size: 15px;
+  }
+  .ebisu .my_account .woocommerce-MyAccount-content h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+}

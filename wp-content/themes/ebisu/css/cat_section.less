@@ -1,0 +1,367 @@
+#wrapper {
+
+  &.page-product-category {
+    margin: 80px auto 0;
+    display: table;
+    padding: 0 0;
+    width: 100%;
+
+
+    > div {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    
+  } /* .page-product-category */
+}
+
+
+.cat-sidebar {
+  width: 300px;
+  padding-right: 50px;
+  padding-left: 10px;
+
+  @media (max-width: 1024px) {
+    width: 250px;
+    padding-right: 30px;
+  }
+  @media (max-width: 900px) {
+    width: 200px;
+    padding-right: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+
+    &:after {content: '';width: 20%;background: @color-border-bw;height: 2px;position: absolute;left: 0;bottom: 0;}
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0 0;
+    > li {
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-size: 18px;
+      line-height: 36px;
+      margin-bottom: 36px;
+      position: relative;
+      float: left;
+      clear: both;
+      width: 100%;
+      height: 36px;
+      overflow: hidden;
+      transition: all .3s ease;
+
+      @media (max-width: 1200px) {
+        font-size: 15px;
+      }
+      @media (max-width: 1000px) {
+        font-size: 14px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+
+      &.expanded {
+        height: auto;
+
+        ul.ebisu_category_sidebar_sub {
+          line-height: 30px;
+        }
+
+        div.expand {
+          > div:last-child {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 34px;
+        width: 100%;
+        height: 2px;
+        background: @color-border-bw;
+      }
+
+      > a {
+        color: @color-font-dark;
+        display: block;
+        position: relative;
+        float: left;
+        width: ~'calc(100% - 36px)';
+        line-height: 36px;
+        height: 36px;
+        overflow: hidden;
+        
+        &:hover {
+          
+        }
+
+        @media (max-width: 1000px) {
+          line-height: 30px;
+          height: 30px;
+        }
+
+        + div.expand {
+          float: right;
+          width: 30px;
+          height: 36px;
+          position: relative;
+          cursor: pointer;
+
+          @media (max-width: 1000px) {
+            height: 30px;
+          }
+
+          &:hover {
+            > div {
+              background: @color-font-dark;
+            }
+          }
+
+          > div{
+            width: ~'calc(100% - 10px)';
+            transition: all .2s ease;
+            height: 1px;
+            position: absolute;
+            background: #dcdcdc;
+            left: 0;
+            top: 50%;
+            &:last-child {
+              transform: rotate(90deg);
+            }
+          }
+
+          > div:last-child {
+            
+          }
+        } /* expand */
+      } /* a */
+    } /* li */
+  } /* ul */
+
+  ul.ebisu_category_sidebar_sub {
+    list-style: none;
+    margin: 15px 0 0;
+    font-size: 15px;
+    line-height: 15px;
+    width: 100%;
+    float: left;
+    clear: both;
+    letter-spacing: 1px;
+    transition: all .2s ease;
+
+    @media (max-width: 1200px) {
+      font-size: 14px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 13px;
+    }
+
+    a {
+      display: block;
+      color: @color-font-lite;
+      transition: color .2s ease;
+      &:hover {
+        color: @color-link-hover;
+      }
+    }
+  }
+
+} /* .cat-sidebar */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  
+  EBISU Cat page Header
+
+*/
+
+
+header.woocommerce-products-header {
+  h1.has_thump {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    > img {
+      width: 100%;
+    }
+    > span {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: absolute;
+      font-size: 35px;
+      left: 0;
+      top: ~'calc(50% - 35px/2)';
+      width: 100%;
+      text-align: center;
+      color: #FFF;
+    }
+  }
+
+  h1:not(.has_thump) {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+  }
+
+
+} 
+
+.storefront-sorting {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .woocommerce-ordering {
+    float: right;
+    height: 30px;
+    border-bottom: solid 2px @color-border-bw;
+    margin-right: 0;
+
+    &:before {
+      content: 'Sort products by :';
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+    }
+
+    select {
+      outline: none !important;
+      border: none;
+      background-color: transparent;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      direction: rtl;
+      cursor: pointer;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 20px;
+      line-height: 20px;
+
+      option {
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+}
+
+
+.site-main .page-product-category ul.products {
+  li.product {
+    width: ~'calc((100%/3 - 10px) + 10px/3)';
+
+    &:nth-child(4n+1) {
+      clear: none !important;
+    }
+
+    &:nth-child(3n+1) {
+      clear: both !important;
+    }
+  }
+}
+
+
+/*
+.site-main .page-product-category ul.products {
+  li.product {
+    width: ~'calc((100%/3 - 10px) + 10px/3)';
+    margin-right: 10px;
+    padding: 20px 10px 10px;
+    text-align: left;
+    transition: padding .1s ease;
+
+    @media (max-width: 768px) {
+      width: ~'calc(50% - 10px)';
+      float: left;
+    }
+
+    h3 {
+      font-size: 14px;
+      line-height: 14px;
+      height: 14px;
+      margin-bottom: 14px;
+      font-weight: 500;
+      text-transform: capitalize;
+      text-align: left;
+      color: @color-font-dark;
+    }
+
+    .price {
+      font-size: 16px;
+      line-height: 16px;
+      height: 16px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: @color-link-hover;
+
+      &:before {
+        content: '฿';
+        font-weight: 200;
+        padding-right: 5px;
+      }
+    }
+
+    a.button { 
+      clear: both;
+      text-transform: uppercase;
+      line-height: 30px;
+      padding: 0 10px;
+      outline: none;
+
+      background: transparent;
+      border: solid 1px @color-link-hover;
+      color: @color-link-hover;
+      box-shadow: none;
+      &:hover {
+        background-color: @color-link-hover;
+        color: #FFF;
+      }
+    }
+
+    a.added_to_cart {
+      text-transform: uppercase;
+      &:after {
+        content: "\f0da";
+      }
+    }
+
+    &:hover {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      box-shadow: 0 0 5px 0 rgba(186, 186, 147, 0.54);
+    }
+  }
+}*/
